@@ -1,0 +1,86 @@
+\documentclass[pdf, 8pt, unicode]{beamer}
+
+\usepackage[cp1251]{inputenc}
+\usepackage[english,russian]{babel}
+
+\usepackage[warn]{mathtext}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{skak}
+\usepackage[version=3]{mhchem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{microtype}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{beamerthemesplit}
+\usepackage{epstopdf}
+\setbeamerfont{institute}{size=\normalsize}
+\setbeamercolor{bluetext_color}{fg=blue}
+\newcommand{\bluetext}[1]{{\usebeamercolor[fg]{bluetext_color}#1}}
+\setbeamercovered{transparent}
+\hypersetup{pdfpagemode=FullScreen}
+
+\title[Метод бросания лучей]{
+Кроссплатформеная реализация \\
+3D визуализации 2D плана помещения}
+\author{\bf Бадагаров Дугар\\
+Шорников Александр}
+\institute{
+Бурятский государственный университет \\
+Институт математики и информатики \\
+    \vspace{1cm}
+    Научный руководитель: ст.преп. Хабитуев Б.В.\\
+    \vspace{1cm}
+}
+\date{
+    Улан-Удэ\\
+    2017г.
+}
+
+\begin{document}
+\begin{frame}
+  % создаём титульный лист
+  \maketitle
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}\frametitle{Метод бросания лучей}
+Метод бросания лучей (англ. raycasting, рейкастинг) - один из методов рендеринга в компьютерной графике,
+при котором сцена строится на основе замеров пересечения лучей с визуализируемой поверхностью.
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=11cm]{rayc}\\
+\end{center}
+\end{figure}
+\end{frame}
+\begin{frame}\frametitle{История}
+Метод бросания лучей в публикациях по компьютерной графике впервые был
+применён в 1982 г. для отрисовки моделей конструктивной блочной геометрии\\
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=10cm]{ScottDRoth}\\
+\end{center}
+\end{figure}
+Roth, Scott D. (February 1982), "Ray Casting for Modeling Solids", Computer Graphics and Image Processing Т. 18: 109–144
+\end{frame}
+\begin{frame}\frametitle{История}
+Для ПК рейкастинг в 1992 г. популяризировала игра Wolfenstein 3D
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=10cm]{Wolf3D}\\
+\end{center}
+\end{figure}
+\end{frame}
+\begin{frame}\frametitle{История}
+Wolfenstein 3D реализует игровую сцену двумерной моделью, которая визуализируется в 3D
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=10cm]{WolfLevel}\\
+\end{center}
+\end{figure}
+\end{frame}
+
+\end{document}

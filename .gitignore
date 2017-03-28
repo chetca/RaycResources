@@ -1,0 +1,9 @@
+*.log*.aux*bbl*.nav*.out*.snm*.toc*.blg*.dvi*.ind 
+Presentation.aux
+Presentation.bbl
+Presentation.blg
+Presentation.log
+Presentation.nav
+Presentation.out
+Presentation.snm
+Presentation.toc
