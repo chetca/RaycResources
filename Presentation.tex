@@ -82,5 +82,109 @@ Wolfenstein 3D реализует игровую сцену двумерной моделью, которая визуализируетс
 \end{center}
 \end{figure}
 \end{frame}
+\begin{frame}\frametitle{Цели и задачи}
+\textbf{Цель данного проекта}:\\
+Создание кроссплатформеного псевдотрёхмерного движка для 3D визуализации помещения по 2D плану.
+
+       \vspace{0.5cm}
+
+       \textbf{Задачи}:\\
+\begin{itemize}
+\item модификация алгоритма рейкастинга для вещественных координат
+\item разработка математической модели для рейкастового рендерера
+\item изучение и освоение технологии кросс-компиляции Cheerp
+\end{itemize}
+\end{frame}
+\begin{frame}\frametitle{Сделали то-то}
+Сделали то-то
+\end{frame}
+\begin{frame}\frametitle{Сделали то-то}
+ то-то
+\end{frame}
+\begin{frame}\frametitle{Сделали то-то}
+ и то-то
+\end{frame}
+\begin{frame}\frametitle{Описание метода: основная идея}
+\begin{minipage}{0.49 \linewidth}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=5cm]{mainIdea}\\ %основная идея
+\end{center}
+\end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49 \linewidth}
+
+$\overrightarrow{\Delta a} = \frac{\left|\overrightarrow{AB}\right|}{w}$\\
+$\overrightarrow{a_{i+1}} = \overrightarrow{a_i} + \overrightarrow{\Delta a}$\\
+$\overrightarrow{a_1} = \overrightarrow{A}$\\
+$\overrightarrow{a_n}=\overrightarrow{B}$\\
+$\overrightarrow{r_i} = \overrightarrow{a_i} - \overrightarrow{P}$\\
+
+\begin{center}\textbf{Алгоритм рейкастинга}\end{center}
+\textit{
+$\text{для каждой } i \in [1,n]$:\\
+\hphantom{мммм}$l \leftarrow \text{расстояние-до-стены} (\overrightarrow{P}, \overrightarrow{r_i})$\\
+\hphantom{мммм}$h \leftarrow \text{высота-отрезка}(l)$\\
+\hphantom{мммм}$\text{отобразить-отрезок}(i, h)$\\
+}
+\end{minipage}
+\end{frame}
+
+\begin{frame}\frametitle{Описание метода: эффект <<рыбьего глаза>>}
+\begin{minipage}{0.49 \linewidth}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=4cm]{fishEye_L}\\ %фишай
+\end{center}
+\end{figure}
+\textit{
+$\text{для каждой } i \in [1,n]$:\\
+{\color{red}\hphantom{мммм}$l \leftarrow \text{расст-до-стены} (\overrightarrow{P}, \overrightarrow{r_i})$}\\
+\hphantom{мммм}$h \leftarrow \text{высота-отрезка}(l)$\\
+\hphantom{мммм}$\text{отобразить-отрезок}(i, h)$\\
+}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49 \linewidth}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=4cm]{fishEye_R}\\ %ноуфишай
+\end{center}
+\end{figure}
+\textit{
+$\text{для каждой } i \in [1,n]$:\\
+{\color{red}\hphantom{мммм}$l \leftarrow \text{расст-до-стены} (\overrightarrow{a_i} - \overrightarrow{PH}, \overrightarrow{PH})$}\\
+\hphantom{мммм}$h \leftarrow \text{высота-отрезка}(l)$\\
+\hphantom{мммм}$\text{отобразить-отрезок}(i, h)$\\
+}
+\end{minipage}
+\end{frame}
+
+\begin{frame}\frametitle{Заключение}
+\textbf{Дальнейшее развитие проекта}
+\begin{itemize}
+\item Задание и визуализация путей на карте
+\item Автоматический визуальный поиск путей на карте
+\item User-friendly редактор планов помещений
+\end{itemize}
+\end{frame}
+\begin{frame}\frametitle{Заключение}
+Проект разрабатывается открыто, исходные коды доступны по ссылке:\\
+\begin{center}
+{\color{blue} \huge{\underline{https://github.com/chetca/Raycasting\_Plan}}}
+\end{center}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=6cm]{git}
+\end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}\frametitle{Заключение}
+\begin{center}
+\center\Huge\textbf{Спасибо за внимание!}
+\end{center}
+\end{frame}
 
 \end{document}
